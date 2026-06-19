@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Dental Clinic | Best Dental Care in Chennai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            font-size: 2.2rem;
+            color: #0d6efd;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0b5ed7;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: #0a58ca;
+            font-weight: 400;
+            font-size: 1.1rem;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-menu a:hover {
+            color: #0d6efd;
+        }
+
+        .contact-btn {
+            background: #0d6efd;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #0b5ed7;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #0d6efd;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e8f4fd 0%, #ffffff 100%);
+            padding: 60px 0 80px;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1 1 400px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0a1e32;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 span {
+            color: #0d6efd;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #0d6efd;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(13, 110, 253, 0.25);
+        }
+
+        .hero-image {
+            flex: 1 1 400px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0a1e32;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        .underline {
+            width: 70px;
+            height: 4px;
+            background: #0d6efd;
+            margin: 15px auto 0;
+            border-radius: 5px;
+        }
+
+        .services {
+            padding: 70px 0;
+            background: #f8fcff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #edf2f7;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(13, 110, 253, 0.1);
+        }
+
+        .service-icon-animated {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon-animated svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #0a1e32;
+        }
+
+        .about {
+            padding: 70px 0;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1 1 400px;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .feature-list i {
+            color: #0d6efd;
+            font-size: 1.3rem;
+        }
+
+        .about-image {
+            flex: 1 1 400px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+        }
+
+        .team {
+            background: #f8fcff;
+            padding: 70px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem 1rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+        }
+
+        .team-member img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #e7f1ff;
+        }
+
+        .team-member h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonials {
+            padding: 70px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #f8fcff;
+            padding: 2rem;
+            border-radius: 25px;
+            border-left: 5px solid #0d6efd;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .testimonial-card .stars {
+            color: #ffc107;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card .client {
+            font-weight: 700;
+            color: #0a1e32;
+        }
+
+        .faq {
+            padding: 70px 0;
+            background: #ffffff;
+        }
+
+        .faq details {
+            background: #f8fcff;
+            border-radius: 16px;
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: all 0.2s;
+        }
+
+        .faq details[open] {
+            background: #eef4ff;
+            box-shadow: 0 6px 18px rgba(13,110,253,0.08);
+        }
+
+        .faq summary {
+            font-weight: 600;
+            font-size: 1.15rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #0a1e32;
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq summary i {
+            color: #0d6efd;
+            transition: transform 0.2s;
+        }
+
+        .faq details[open] summary i {
+            transform: rotate(180deg);
+        }
+
+        .faq .faq-answer {
+            margin-top: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .contact {
+            padding: 70px 0;
+            background: #f0f7ff;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1 1 350px;
+            background: white;
+            padding: 2rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: #0d6efd;
+            width: 30px;
+            text-align: center;
+        }
+
+        .map-container {
+            flex: 1 1 400px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border: 0;
+        }
+
+        footer {
+            background: #0a1e32;
+            color: #ddd;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-col {
+            flex: 1 1 220px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #adb5bd;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #2d3a4a;
+            font-size: 0.9rem;
+            color: #adb5bd;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background: white;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                padding: 2rem;
+                gap: 1.5rem;
+                transition: 0.3s;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <i class="fas fa-tooth logo-icon"></i>
+                <div class="logo-text">Dental<span>Clinic Chennai</span></div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Doctors</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="contact-btn">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Your Smile, <span>Our Passion</span><br>in Chennai</h1>
+                <p>Experience world‑class dental care with advanced technology and a gentle touch. Dental Clinic – trusted by families across Chennai.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dental clinic Chennai" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Dental Clinic?</h2>
+                <div class="underline"></div>
+                <p>Your trusted dental partner in Chennai, combining expertise with compassionate care.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Advanced Dentistry<br>with a Human Touch</h2>
+                    <p>At Dental Clinic, we believe that a healthy smile transforms lives. Located in the heart of Chennai, our clinic is equipped with state‑of‑the‑art technology and a team of highly experienced dentists dedicated to providing pain‑free treatments.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> 15+ Years of Clinical Excellence</li>
+                        <li><i class="fas fa-check-circle"></i> Sterilized & Safe Environment</li>
+                        <li><i class="fas fa-check-circle"></i> Same‑Day Emergency Appointments</li>
+                        <li><i class="fas fa-check-circle"></i> Affordable & Transparent Pricing</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dental procedure" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Dental Services</h2>
+                <div class="underline"></div>
+                <p>Comprehensive treatments for the whole family – from routine cleaning to full smile makeovers.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-animated animate-float">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" fill="#E3F2FD" stroke="#0d6efd" stroke-width="2"/>
+                            <path d="M35 45 C35 38 42 32 50 32 C58 32 65 38 65 45 C65 55 58 62 50 62 C42 62 35 55 35 45Z" fill="#ffffff" stroke="#0d6efd" stroke-width="2"/>
+                            <path d="M42 48 L48 54 L58 44" stroke="#0d6efd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="44" cy="40" r="4" fill="#0d6efd" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <h3>General Dentistry</h3>
+                    <p>Check‑ups, fillings, scaling & polishing to maintain oral health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-animated animate-float">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#E8F0FE" stroke="#0d6efd" stroke-width="2"/>
+                            <path d="M50 25 L55 35 L65 38 L57 47 L59 58 L50 53 L41 58 L43 47 L35 38 L45 35 L50 25Z" fill="#0d6efd" opacity="0.7"/>
+                            <path d="M50 55 L50 75" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M43 68 L57 68" stroke="#0d6efd" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Root Canal Treatment</h3>
+                    <p>Painless RCT with modern rotary endodontics.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-animated animate-float">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#FFF3E0" stroke="#0d6efd" stroke-width="2"/>
+                            <path d="M30 45 Q50 30 70 45" stroke="#0d6efd" stroke-width="5" fill="none" stroke-linecap="round"/>
+                            <circle cx="38" cy="42" r="4" fill="#0d6efd"/>
+                            <circle cx="50" cy="38" r="4" fill="#0d6efd"/>
+                            <circle cx="62" cy="42" r="4" fill="#0d6efd"/>
+                            <path d="M25 55 L75 55" stroke="#0d6efd" stroke-width="3" opacity="0.6"/>
+                            <path d="M50 55 L50 70" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Veneers, teeth whitening & smile designing.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-animated animate-float">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#E8F5E8" stroke="#0d6efd" stroke-width="2"/>
+                            <rect x="40" y="25" width="20" height="50" rx="8" fill="#ffffff" stroke="#0d6efd" stroke-width="2"/>
+                            <circle cx="50" cy="35" r="6" fill="#0d6efd"/>
+                            <line x1="50" y1="41" x2="50" y2="70" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M40 60 L60 60" stroke="#0d6efd" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3>Dental Implants</h3>
+                    <p>Permanent tooth replacement with titanium implants.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-animated animate-float">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#FCE4EC" stroke="#0d6efd" stroke-width="2"/>
+                            <circle cx="50" cy="45" r="18" fill="#ffffff" stroke="#0d6efd" stroke-width="2"/>
+                            <circle cx="44" cy="42" r="3" fill="#0d6efd"/>
+                            <circle cx="56" cy="42" r="3" fill="#0d6efd"/>
+                            <path d="M44 50 Q50 55 56 50" stroke="#0d6efd" stroke-width="2" fill="none"/>
+                            <path d="M50 63 L50 72" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Kids Dentistry</h3>
+                    <p>Gentle care for little smiles, preventing cavities.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-animated animate-float">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="#EDE7F6" stroke="#0d6efd" stroke-width="2"/>
+                            <rect x="30" y="30" width="40" height="45" rx="5" fill="#ffffff" stroke="#0d6efd" stroke-width="2"/>
+                            <circle cx="50" cy="45" r="10" fill="#0d6efd" opacity="0.5"/>
+                            <path d="M45 55 L55 55 L55 65 L45 65 Z" fill="#0d6efd" opacity="0.4"/>
+                            <line x1="35" y1="35" x2="65" y2="35" stroke="#0d6efd" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Digital X‑Ray</h3>
+                    <p>Low radiation, instant imaging for accurate diagnosis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Specialists</h2>
+                <div class="underline"></div>
+                <p>Highly qualified dentists committed to delivering the best outcomes.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="d1.jpeg" alt="Dr. Ananya" loading="lazy">
+                    <h4>Dr. Ananya R.</h4>
+                    <p>MDS - Periodontist</p>
+                    <small>12 Years Experience</small>
+                </div>
+                <div class="team-member">
+                    <img src="d2.png" alt="Dr. Karthik" loading="lazy">
+                    <h4>Dr. Karthik S.</h4>
+                    <p>MDS - Endodontist</p>
+                    <small>10 Years Experience</small>
+                </div>
+                <div class="team-member">
+                    <img src="d3.jpg" alt="Dr. Priya" loading="lazy">
+                    <h4>Dr. Priya M.</h4>
+                    <p>BDS, Cosmetic Dentist</p>
+                    <small>8 Years Experience</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Patients Say on Google</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"I was terrified of dentists, but Dr. Ananya made my root canal completely painless. The clinic is so clean and modern. Highly recommended in Chennai!"</p>
+                    <div class="client">– Lakshmi S</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Got my dental implants here. The procedure was smooth and the team explained everything clearly. Very affordable pricing."</p>
+                    <div class="client">– Ramesh K</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"My kids love coming here! The pediatric dentist is so friendly. Best dental clinic in Chennai for families."</p>
+                    <div class="client">– Sunitha V</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <div class="underline"></div>
+                <p>Quick answers to common queries about our dental services.</p>
+            </div>
+            <details>
+                <summary>What are your clinic timings? <i class="fas fa-chevron-down"></i></summary>
+                <div class="faq-answer">
+                    We are open Monday to Saturday from 9:30 AM to 8:00 PM, and on Sundays from 10:00 AM to 2:00 PM. Appointments can be booked online or by phone.
+                </div>
+            </details>
+            <details>
+                <summary>Do you accept dental insurance?</summary>
+                <div class="faq-answer">
+                    Yes, we work with most major insurance providers. Please bring your insurance card during your visit, and our team will assist you with the claims process.
+                </div>
+            </details>
+            <details>
+                <summary>Is root canal treatment painful?</summary>
+                <div class="faq-answer">
+                    Not at Dental Clinic! We use advanced rotary endodontics and local anesthesia to ensure a virtually painless experience. Most patients compare it to getting a routine filling.
+                </div>
+            </details>
+            <details>
+                <summary>How much does a dental implant cost?</summary>
+                <div class="faq-answer">
+                    The cost varies depending on the case. We offer a free consultation where our implantologist will evaluate your needs and provide a transparent quote. We also have EMI options.
+                </div>
+            </details>
+            <details>
+                <summary>Do you treat children?</summary>
+                <div class="faq-answer">
+                    Absolutely. Our pediatric dentist, Dr. Priya, specializes in gentle care for kids. We make every visit fun and stress‑free for little smiles.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visit Our Clinic</h2>
+                <div class="underline"></div>
+                <p>We are conveniently located in Chennai. Call or visit us today.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Dental Clinic</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><strong>Address:</strong><br>No. 42, 2nd Main Road,<br>T. Nagar, Chennai – 600017,<br>Tamil Nadu, India</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div><strong>Number:</strong><br><a href="tel:+919876543210" style="color:#0d6efd; text-decoration:none;">+91 98765 43210</a></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div><strong>Email:</strong><br>care@nalamdentalclinic.com</div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div><strong>Hours:</strong><br>Mon–Sat: 9:30 AM – 8:00 PM<br>Sun: 10:00 AM – 2:00 PM</div>
+                    </div>
+                    <a href="tel:+919876543210" class="btn-primary" style="margin-top:15px; display:inline-block;"><i class="fas fa-calendar-check"></i> Book Now</a>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.875054396426!2d80.23372331534444!3d13.041782190806417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52665e5f2e5ab3%3A0x8b3b1c1b7d3b10!2sT.%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1618890000000" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Dental Clinic location in Chennai">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Dental Clinic</h4>
+                    <p>Compassionate dentistry in Chennai. Transforming smiles since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 99999 99999</p>
+                    <p><i class="fas fa-envelope"></i> care@nalamdentalclinic.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> T. Nagar, Chennai</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Dental Clinic, Chennai. All rights reserved. | Designed for healthy smiles.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/15550100001?text=Hello%20Dental%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener" 
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
