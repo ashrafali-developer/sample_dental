@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Dental Clinic | Best Dental Care in Chennai</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         html {
             scroll-behavior: smooth;
@@ -21,6 +23,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #fff;
+            overflow-x: hidden; /* Prevents horizontal scroll from animations */
         }
 
         .container {
@@ -603,14 +606,14 @@
 
     <section class="hero" id="home">
         <div class="container">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="800">
                 <h1>Your Smile, <span>Our Passion</span><br>in Chennai</h1>
                 <p>Experience world‑class dental care with advanced technology and a gentle touch. Dental Clinic – trusted by families across Chennai.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="800">
                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dental clinic Chennai" loading="lazy">
             </div>
         </div>
@@ -618,13 +621,13 @@
 
     <section class="about" id="about">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Why Dental Clinic?</h2>
                 <div class="underline"></div>
                 <p>Your trusted dental partner in Chennai, combining expertise with compassionate care.</p>
             </div>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="800">
                     <h2>Advanced Dentistry<br>with a Human Touch</h2>
                     <p>At Dental Clinic, we believe that a healthy smile transforms lives. Located in the heart of Chennai, our clinic is equipped with state‑of‑the‑art technology and a team of highly experienced dentists dedicated to providing pain‑free treatments.</p>
                     <ul class="feature-list">
@@ -634,7 +637,7 @@
                         <li><i class="fas fa-check-circle"></i> Affordable & Transparent Pricing</li>
                     </ul>
                 </div>
-                <div class="about-image">
+                <div class="about-image" data-aos="fade-left" data-aos-duration="800">
                     <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dental procedure" loading="lazy">
                 </div>
             </div>
@@ -643,13 +646,13 @@
 
     <section class="services" id="services">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Our Dental Services</h2>
                 <div class="underline"></div>
                 <p>Comprehensive treatments for the whole family – from routine cleaning to full smile makeovers.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon-animated animate-float">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="45" fill="#E3F2FD" stroke="#0d6efd" stroke-width="2"/>
@@ -661,7 +664,7 @@
                     <h3>General Dentistry</h3>
                     <p>Check‑ups, fillings, scaling & polishing to maintain oral health.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150">
                     <div class="service-icon-animated animate-float">
                         <svg viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="45" fill="#E8F0FE" stroke="#0d6efd" stroke-width="2"/>
@@ -673,7 +676,7 @@
                     <h3>Root Canal Treatment</h3>
                     <p>Painless RCT with modern rotary endodontics.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon-animated animate-float">
                         <svg viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="45" fill="#FFF3E0" stroke="#0d6efd" stroke-width="2"/>
@@ -688,7 +691,7 @@
                     <h3>Cosmetic Dentistry</h3>
                     <p>Veneers, teeth whitening & smile designing.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="250">
                     <div class="service-icon-animated animate-float">
                         <svg viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="45" fill="#E8F5E8" stroke="#0d6efd" stroke-width="2"/>
@@ -701,7 +704,7 @@
                     <h3>Dental Implants</h3>
                     <p>Permanent tooth replacement with titanium implants.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon-animated animate-float">
                         <svg viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="45" fill="#FCE4EC" stroke="#0d6efd" stroke-width="2"/>
@@ -715,7 +718,7 @@
                     <h3>Kids Dentistry</h3>
                     <p>Gentle care for little smiles, preventing cavities.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="350">
                     <div class="service-icon-animated animate-float">
                         <svg viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="45" fill="#EDE7F6" stroke="#0d6efd" stroke-width="2"/>
@@ -734,25 +737,25 @@
 
     <section class="team" id="team">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Meet Our Specialists</h2>
                 <div class="underline"></div>
                 <p>Highly qualified dentists committed to delivering the best outcomes.</p>
             </div>
             <div class="team-grid">
-                <div class="team-member">
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="100">
                     <img src="d1.jpeg" alt="Dr. Ananya" loading="lazy">
                     <h4>Dr. Ananya R.</h4>
                     <p>MDS - Periodontist</p>
                     <small>12 Years Experience</small>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
                     <img src="d2.png" alt="Dr. Karthik" loading="lazy">
                     <h4>Dr. Karthik S.</h4>
                     <p>MDS - Endodontist</p>
                     <small>10 Years Experience</small>
                 </div>
-                <div class="team-member">
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="300">
                     <img src="d3.jpg" alt="Dr. Priya" loading="lazy">
                     <h4>Dr. Priya M.</h4>
                     <p>BDS, Cosmetic Dentist</p>
@@ -764,26 +767,26 @@
 
     <section class="testimonials">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>What Our Patients Say on Google</h2>
                 <div class="underline"></div>
             </div>
             <div class="testimonial-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p>"I was terrified of dentists, but Dr. Ananya made my root canal completely painless. The clinic is so clean and modern. Highly recommended in Chennai!"</p>
                     <div class="client">– Lakshmi S</div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p>"Got my dental implants here. The procedure was smooth and the team explained everything clearly. Very affordable pricing."</p>
                     <div class="client">– Ramesh K</div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
@@ -794,39 +797,38 @@
         </div>
     </section>
 
-    <!-- FAQ Section with down arrow on ALL questions -->
     <section class="faq" id="faq">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Frequently Asked Questions</h2>
                 <div class="underline"></div>
                 <p>Quick answers to common queries about our dental services.</p>
             </div>
-            <details>
+            <details data-aos="fade-up" data-aos-delay="100">
                 <summary>What are your clinic timings? <i class="fas fa-chevron-down"></i></summary>
                 <div class="faq-answer">
                     We are open Monday to Saturday from 9:30 AM to 8:00 PM, and on Sundays from 10:00 AM to 2:00 PM. Appointments can be booked online or by phone.
                 </div>
             </details>
-            <details>
+            <details data-aos="fade-up" data-aos-delay="150">
                 <summary>Do you accept dental insurance? <i class="fas fa-chevron-down"></i></summary>
                 <div class="faq-answer">
                     Yes, we work with most major insurance providers. Please bring your insurance card during your visit, and our team will assist you with the claims process.
                 </div>
             </details>
-            <details>
+            <details data-aos="fade-up" data-aos-delay="200">
                 <summary>Is root canal treatment painful? <i class="fas fa-chevron-down"></i></summary>
                 <div class="faq-answer">
                     Not at Dental Clinic! We use advanced rotary endodontics and local anesthesia to ensure a virtually painless experience. Most patients compare it to getting a routine filling.
                 </div>
             </details>
-            <details>
+            <details data-aos="fade-up" data-aos-delay="250">
                 <summary>How much does a dental implant cost? <i class="fas fa-chevron-down"></i></summary>
                 <div class="faq-answer">
                     The cost varies depending on the case. We offer a free consultation where our implantologist will evaluate your needs and provide a transparent quote. We also have EMI options.
                 </div>
             </details>
-            <details>
+            <details data-aos="fade-up" data-aos-delay="300">
                 <summary>Do you treat children? <i class="fas fa-chevron-down"></i></summary>
                 <div class="faq-answer">
                     Absolutely. Our pediatric dentist, Dr. Priya, specializes in gentle care for kids. We make every visit fun and stress‑free for little smiles.
@@ -837,13 +839,13 @@
 
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Visit Our Clinic</h2>
                 <div class="underline"></div>
                 <p>We are conveniently located in Chennai. Call or visit us today.</p>
             </div>
             <div class="contact-wrapper">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
                     <h3>Dental Clinic</h3>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -855,7 +857,7 @@
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <div><strong>Email:</strong><br>care@dentalclinic.com</div>
+                        <div><strong>Email:</strong><br>care@nalamdentalclinic.com</div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-clock"></i>
@@ -863,7 +865,7 @@
                     </div>
                     <a href="tel:+91 9999999999" class="btn-primary" style="margin-top:15px; display:inline-block;"><i class="fas fa-calendar-check"></i> Book Now</a>
                 </div>
-                <div class="map-container">
+                <div class="map-container" data-aos="fade-left" data-aos-duration="800">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.875054396426!2d80.23372331534444!3d13.041782190806417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52665e5f2e5ab3%3A0x8b3b1c1b7d3b10!2sT.%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1618890000000" 
                         allowfullscreen="" 
@@ -878,7 +880,7 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content" data-aos="fade-up">
                 <div class="footer-col">
                     <h4>Dental Clinic</h4>
                     <p>Compassionate dentistry in Chennai. Transforming smiles since 2010.</p>
@@ -894,7 +896,7 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <p><i class="fas fa-phone"></i> +91 9999999999</p>
-                    <p><i class="fas fa-envelope"></i> care@dentalclinic.com</p>
+                    <p><i class="fas fa-envelope"></i> care@nalamdentalclinic.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> T. Nagar, Chennai</p>
                 </div>
             </div>
@@ -912,7 +914,16 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- AOS Library Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true, // animation happens only once
+            offset: 100
+        });
+
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
 
